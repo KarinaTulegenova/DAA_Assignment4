@@ -1,0 +1,10 @@
+file,n,edges,scc,dag_nodes,dag_edges,src_comp,sp_relax,lp_relax,time_ms,time_us
+large_01.json,24,88,24,24,88,19,65,65,3.57,3567
+large_02.json,30,226,1,1,0,0,0,0,0.32,321
+large_03.json,40,624,1,1,0,0,0,0,0.63,627
+medium_01.json,12,26,12,12,26,11,26,26,0.21,210
+medium_02.json,16,67,1,1,0,0,0,0,0.15,152
+medium_03.json,18,110,1,1,0,0,0,0,0.20,202
+small_01.json,6,4,6,6,4,1,1,1,0.09,92
+small_02.json,8,12,7,7,9,1,1,1,0.16,160
+small_03.json,10,27,2,2,1,0,0,0,0.14,142
