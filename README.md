@@ -1,6 +1,7 @@
 # Report
 
 **Author:** Tulegenova Karina
+
 **Group:** SE-2419
 
 ## Theme
@@ -18,24 +19,24 @@ By applying **Tarjan’s Strongly Connected Components (SCC)** algorithm, **Cond
 ### 1. Tarjan’s Algorithm (SCC Detection)
 
 **Description:**
-Tarjan’s algorithm identifies all *strongly connected components* in a directed graph using depth-first search (DFS) and stack-based tracking of vertex discovery times.
-It efficiently partitions the graph into subgraphs where every vertex is reachable from every other vertex.
+<img width="1566" height="70" alt="image" src="https://github.com/user-attachments/assets/daf5620d-57e7-4c01-8afb-58ee856dabd6" />
 
 **Key Operations:**
-
-* Depth-first traversal of vertices
-* Maintaining discovery time (`disc[]`) and low-link value (`low[]`)
-* Stack push/pop operations for component extraction
+* index[v]: Discovery time of vertex 𝑣— the order in which 𝑣is first visited.
+* lowlink[v]: The smallest index reachable from vertex 𝑣(either directly or through descendants in DFS).
 
 **Time Complexity:** O(V + E)
+
 **Space Complexity:** O(V)
 
 **Characteristics:**
-
 * Detects all SCCs in a single DFS pass
 * Foundation for graph condensation and DAG analysis
 * Useful for identifying circular dependencies in smart-city networks
+* One-pass DFS: Unlike Kosaraju’s, no need to reverse the graph.
+* Same Time Complexity: 𝑂(𝑉+𝐸), where 𝑉is the number of vertices and 𝐸is the number of edges.
 
+<img width="700" height="287" alt="image" src="https://github.com/user-attachments/assets/8b69ff02-1acb-49cc-80e0-60a51ad27665" />
 
 
 ### 2. Condensation Graph Construction
@@ -67,6 +68,7 @@ Kahn’s algorithm produces a topological order of vertices in a DAG.
 It repeatedly removes nodes with zero in-degree, ensuring dependencies are respected.
 
 **Key Operations:**
+<img width="382" height="340" alt="image" src="https://github.com/user-attachments/assets/db79510f-d567-49e2-b2ac-0970b549d5de" />
 
 * Computing in-degree for each vertex
 * Queue-based iteration and edge removal
@@ -78,6 +80,7 @@ It repeatedly removes nodes with zero in-degree, ensuring dependencies are respe
 
 * Guarantees a valid linear order
 * Required for dynamic programming on DAGs
+<img width="520" height="340" alt="image" src="https://github.com/user-attachments/assets/1df732f5-dd6f-4c6a-898d-5bcf14569017" />
 
 
 
@@ -120,14 +123,8 @@ It’s useful for identifying the maximum delay or longest communication route i
 ## 1. Summary of Input Data and Algorithm Results
 
 ### Dataset Overview
-
-Nine datasets were generated using the **DatasetGenerator**:
-
-| Category     | Vertices (V) | Edges (E) | Density   | Cycles | Purpose                      |
-| ------------ | ------------ | --------- | --------- | ------ | ---------------------------- |
-| small_01–03  | 6–10         | 20–40     | 0.15–0.30 | Some   | Algorithm validation         |
-| medium_01–03 | 12–18        | 40–80     | 0.20–0.36 | Mixed  | SCC and condensation testing |
-| large_01–03  | 24–40        | 150–400   | 0.16–0.40 | Many   | Performance and scalability  |
+<img width="1136" height="362" alt="image" src="https://github.com/user-attachments/assets/d9d21eaa-699b-4985-bb27-3489f944aa76" />
+<img width="306" height="294" alt="image" src="https://github.com/user-attachments/assets/bb59f4ac-d610-4d84-97dc-41f9fce8c692" />
 
 ### Collected Metrics
 
@@ -136,31 +133,24 @@ Nine datasets were generated using the **DatasetGenerator**:
 * DAG vertices and edges after condensation
 * Execution time (ms)
 * Operation counters (DFS calls, queue operations, relaxations)
+<img width="1372" height="277" alt="image" src="https://github.com/user-attachments/assets/e861d895-f3fb-4847-84d4-46ba9eabde15" />
 
+### Total Analysis
+<img width="1739" height="376" alt="image" src="https://github.com/user-attachments/assets/09644491-8c8e-4c56-be82-01fbf831205d" />
+The table below summarizes the experimental results for three datasets of different sizes — small, medium, and large.
+Each dataset represents a directed weighted graph, and several metrics were collected during processing.
 
+n (vertices) — number of nodes in the graph.
+edges — number of directed connections between nodes.
+scc — number of strongly connected components (SCCs) detected by Tarjan’s algorithm.
+dag_nodes / dag_edges — number of nodes and edges in the condensed Directed Acyclic Graph (DAG) formed after merging SCCs.
+src_comp — ID of the source component used for shortest and longest path calculations.
+sp_relax / lp_relax — number of edge relaxations performed during shortest and longest path algorithms.
+time_ms / time_us — total execution time in milliseconds and microseconds.
+operations_count — total number of algorithmic operations (DFS traversals, queue operations, relaxations).
 
-### Example Analysis
-
-**Small Dataset (small_01.json)**
-
-* 6 vertices, 15 edges
-* 2 SCCs detected
-* Condensed DAG: 2 vertices, 3 edges
-* Execution time: 0.4 ms
-
-**Medium Dataset (medium_03.json)**
-
-* 18 vertices, 60 edges
-* 4 SCCs
-* DAG: 4 nodes, 6 edges
-* Execution time: 1.9 ms
-
-**Large Dataset (large_03.json)**
-
-* 40 vertices, 300 edges
-* 7 SCCs
-* DAG: 7 nodes, 18 edges
-* Execution time: 5.6 ms
+This table helps visualize how graph size affects computational complexity.
+Larger datasets show higher execution time and more operations, demonstrating the scalability of the algorithms.
 
 
 
