@@ -1,0 +1,10 @@
+file,src_comp,sink_comp,length,relaxations,time_ms,route_space_sep
+large_01.json,19,0,37,65,8.63,19 17 14 10 9 8 4 3 0
+large_02.json,0,0,0,0,0.41,0
+large_03.json,0,0,0,0,0.90,0
+medium_01.json,11,0,46,26,0.27,11 9 8 6 4 3 2 0
+medium_02.json,0,0,0,0,0.13,0
+medium_03.json,0,0,0,0,0.24,0
+small_01.json,1,0,8,1,0.12,1 0
+small_02.json,1,0,5,1,0.19,1 0
+small_03.json,0,0,0,0,0.13,0

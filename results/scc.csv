@@ -1,0 +1,56 @@
+file,comp_id,size,vertices_space_sep
+large_01.json,0,1,23
+large_01.json,1,1,22
+large_01.json,2,1,20
+large_01.json,3,1,21
+large_01.json,4,1,19
+large_01.json,5,1,18
+large_01.json,6,1,14
+large_01.json,7,1,15
+large_01.json,8,1,17
+large_01.json,9,1,16
+large_01.json,10,1,13
+large_01.json,11,1,10
+large_01.json,12,1,8
+large_01.json,13,1,11
+large_01.json,14,1,9
+large_01.json,15,1,12
+large_01.json,16,1,7
+large_01.json,17,1,3
+large_01.json,18,1,4
+large_01.json,19,1,0
+large_01.json,20,1,6
+large_01.json,21,1,2
+large_01.json,22,1,1
+large_01.json,23,1,5
+large_02.json,0,30,1 9 17 16 26 18 23 10 4 24 29 6 21 22 2 3 7 27 20 13 19 5 12 8 11 14 25 15 28 0
+large_03.json,0,40,18 14 17 39 15 35 20 5 23 11 9 24 30 7 10 37 6 22 4 3 38 31 29 1 21 34 8 13 12 32 16 26 33 28 2 19 25 27 36 0
+medium_01.json,0,1,11
+medium_01.json,1,1,8
+medium_01.json,2,1,9
+medium_01.json,3,1,7
+medium_01.json,4,1,6
+medium_01.json,5,1,5
+medium_01.json,6,1,4
+medium_01.json,7,1,10
+medium_01.json,8,1,2
+medium_01.json,9,1,1
+medium_01.json,10,1,3
+medium_01.json,11,1,0
+medium_02.json,0,16,14 6 9 1 3 10 8 12 15 4 11 2 13 5 7 0
+medium_03.json,0,18,12 4 7 13 14 10 15 1 16 3 8 6 9 17 2 5 11 0
+small_01.json,0,1,4
+small_01.json,1,1,0
+small_01.json,2,1,5
+small_01.json,3,1,1
+small_01.json,4,1,3
+small_01.json,5,1,2
+small_02.json,0,1,2
+small_02.json,1,1,0
+small_02.json,2,1,6
+small_02.json,3,2,4 3
+small_02.json,4,1,5
+small_02.json,5,1,7
+small_02.json,6,1,1
+small_03.json,0,9,1 2 6 3 5 8 7 9 0
+small_03.json,1,1,4
